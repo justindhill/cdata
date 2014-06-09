@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		D034E4631943AB5900875449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034E4621943AB5900875449 /* AppDelegate.swift */; };
 		D034E4661943AB5900875449 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D034E4641943AB5900875449 /* CoreData.xcdatamodeld */; };
-		D034E4681943AB5900875449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034E4671943AB5900875449 /* ViewController.swift */; };
-		D034E46B1943AB5900875449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D034E4691943AB5900875449 /* Main.storyboard */; };
 		D034E46D1943AB5900875449 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D034E46C1943AB5900875449 /* Images.xcassets */; };
 		D034E4791943AB5A00875449 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034E4781943AB5A00875449 /* CoreDataTests.swift */; };
+		D034E4831943AFEC00875449 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D034E4821943AFEC00875449 /* CoreLocation.framework */; };
+		D034E4851943B67300875449 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034E4841943B67300875449 /* TableViewController.swift */; };
+		D034E48C1943C54600875449 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D034E48B1943C54600875449 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +31,15 @@
 		D034E4611943AB5900875449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D034E4621943AB5900875449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D034E4651943AB5900875449 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
-		D034E4671943AB5900875449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D034E46A1943AB5900875449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D034E46C1943AB5900875449 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D034E4721943AB5A00875449 /* CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D034E4771943AB5A00875449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D034E4781943AB5A00875449 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		D034E4821943AFEC00875449 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D034E4841943B67300875449 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D034E4891943C54500875449 /* CoreData-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreData-Bridging-Header.h"; sourceTree = "<group>"; };
+		D034E48A1943C54600875449 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
+		D034E48B1943C54600875449 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D034E4831943AFEC00875449 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +64,11 @@
 		D034E4541943AB5900875449 = {
 			isa = PBXGroup;
 			children = (
+				D034E4821943AFEC00875449 /* CoreLocation.framework */,
 				D034E45F1943AB5900875449 /* CoreData */,
 				D034E4751943AB5A00875449 /* CoreDataTests */,
 				D034E45E1943AB5900875449 /* Products */,
+				D034E4891943C54500875449 /* CoreData-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +84,9 @@
 		D034E45F1943AB5900875449 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D034E48D1943C55000875449 /* Model */,
 				D034E4621943AB5900875449 /* AppDelegate.swift */,
-				D034E4671943AB5900875449 /* ViewController.swift */,
-				D034E4691943AB5900875449 /* Main.storyboard */,
+				D034E4841943B67300875449 /* TableViewController.swift */,
 				D034E46C1943AB5900875449 /* Images.xcassets */,
 				D034E4641943AB5900875449 /* CoreData.xcdatamodeld */,
 				D034E4601943AB5900875449 /* Supporting Files */,
@@ -110,6 +117,15 @@
 				D034E4771943AB5A00875449 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D034E48D1943C55000875449 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D034E48A1943C54600875449 /* Event.h */,
+				D034E48B1943C54600875449 /* Event.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D034E46B1943AB5900875449 /* Main.storyboard in Resources */,
 				D034E46D1943AB5900875449 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,9 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D034E4681943AB5900875449 /* ViewController.swift in Sources */,
+				D034E48C1943C54600875449 /* Event.m in Sources */,
 				D034E4661943AB5900875449 /* CoreData.xcdatamodeld in Sources */,
 				D034E4631943AB5900875449 /* AppDelegate.swift in Sources */,
+				D034E4851943B67300875449 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,17 +250,6 @@
 			targetProxy = D034E4731943AB5A00875449 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D034E4691943AB5900875449 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D034E46A1943AB5900875449 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D034E47A1943AB5A00875449 /* Debug */ = {
@@ -331,9 +336,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Justin Hill (X24REW3756)";
 				INFOPLIST_FILE = CoreData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "261EE45D-5629-4C63-9400-4754667FA15E";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreData-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,9 +353,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Justin Hill (X24REW3756)";
 				INFOPLIST_FILE = CoreData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "261EE45D-5629-4C63-9400-4754667FA15E";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreData-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -403,6 +419,7 @@
 				D034E47E1943AB5A00875449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D034E47F1943AB5A00875449 /* Build configuration list for PBXNativeTarget "CoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +428,7 @@
 				D034E4811943AB5A00875449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
